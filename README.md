@@ -8,3 +8,6 @@ https://www.youtube.com/watch?v=nFKUCMm4Gqo
 http://radtech.cba.pl/servo18.html
 
 http://radtech.cba.pl/servosoft.html
+
+### Project created with wxDec-C++ environment
+http://wxdsgn.sourceforge.net/?q=node/4
