@@ -1,0 +1,22 @@
+#START#Wiercenie
+.src
+0
+0
+&ACCESS RVOÿ&REL 1ÿ&PARAM EDITMASK = *ÿ&PARAM TEMPLATE = C:\KRC\Roboter\Template\vorgabeÿDEF @NAME@( )ÿDECL FRAME VecÿDECL INT DeepÿÿVec = { X 580, Y 400, Z 400 }ÿDeep = 5;ÿÿ; najazd nad plyteÿgrindinit()ÿ
+Drill( transvec( { X @X@, Y @Y@, Z 3 }, Vec ), Deep )
+ 
+ÿFLin( { X 580, Y 400, Z 600 } )ÿÿ;FOLD PTP HOME Vel=30 % DEFAULT;%{PE}%R 8.3.31,%MKUKATPBASIS,%CMOVE,%VPTP,%P 1:PTP, 2:HOME, 3:, 5:30, 7:DEFAULTÿ$BWDSTART=FALSEÿPDAT_ACT=PDEFAULTÿFDAT_ACT=FHOMEÿBAS(#PTP_PARAMS,30)ÿ$H_POS=XHOMEÿPTP XHOME ÿ;ENDFOLDÿÿEND
+#END#Wiercenie
+#START#Grawerowanie
+.src
+0
+0
+0.1
+&ACCESS RVOÿ&REL 1ÿ&PARAM EDITMASK = *ÿ&PARAM TEMPLATE = C:\KRC\Roboter\Template\vorgabeÿDEF @NAME@( )ÿDECL FRAME VecÿÿVec = { X 580, Y 400, Z 400 }ÿÿ; najazd nad plyteÿgrindinit()ÿ
+FLin( transvec( { X @X@, Y @Y@, Z 5 }, Vec ) )ÿWLin( transvec( { X @X@, Y @Y@, Z 0 }, Vec ) )ÿ
+WLin( transvec( { X @X@, Y @Y@, Z 0 }, Vec ) )
+WCirc( transvec( { X @AX@, Y @AY@, Z 0 }, Vec ), transvec( { X @X@, Y @Y@, Z 0 }, Vec ) )
+WCirc( transvec( { X @AX@, Y @AY@, Z 0 }, Vec ), transvec( { X @X@, Y @Y@, Z 0 }, Vec ) )
+ÿFLin( transvec( { X @X@, Y @Y@, Z 5 }, Vec ) )
+ÿFLin( { X 580, Y 400, Z 600 } )ÿÿ;FOLD PTP HOME Vel=30 % DEFAULT;%{PE}%R 8.3.31,%MKUKATPBASIS,%CMOVE,%VPTP,%P 1:PTP, 2:HOME, 3:, 5:30, 7:DEFAULTÿ$BWDSTART=FALSEÿPDAT_ACT=PDEFAULTÿFDAT_ACT=FHOMEÿBAS(#PTP_PARAMS,30)ÿ$H_POS=XHOMEÿPTP XHOME ÿ;ENDFOLDÿÿEND
+#END#Grawerowanie

@@ -1,0 +1,22 @@
+#START#Wiercenie
+MPF
+100
+100
+;@NAME@ÿÿWORKPIECE(,"",,"BOX",0,0,-2,-80,0,0,300,300)ÿÿG90 G94 F0.5 S100ÿT="W1_0"ÿM6 M3ÿ
+G0 X@X@ Y@Y@ Z2ÿG1 Z-3ÿG1 Z2
+ 
+ÿM2
+#END#Wiercenie
+#START#Grawerowanie
+MPF
+100
+100
+0.1
+;@NAME@ÿÿWORKPIECE(,"",,"BOX",0,0,-2,-80,0,0,300,300)ÿÿG90 G94 F0.5 S100ÿT="GRAWER"ÿM6 M3ÿ
+;Poczatek konturu wjazd w materialÿG0 X@X@ Y@Y@ Z2ÿG1 Z-0.2ÿ
+G1 X@X@ Y@Y@
+G2 X@X@ Y@Y@ I@I@ J@J@
+G3 X@X@ Y@Y@ I@I@ J@J@
+G0 Z2ÿ
+M2
+#END#Grawerowanie

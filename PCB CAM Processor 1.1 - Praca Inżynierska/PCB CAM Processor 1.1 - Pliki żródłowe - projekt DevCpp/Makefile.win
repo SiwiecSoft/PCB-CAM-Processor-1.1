@@ -1,0 +1,100 @@
+# Project: PCB CAM Processor
+# Compiler: Default GCC compiler
+# Compiler Type: MingW 3
+# Makefile created by wxDev-C++ 7.3 on 06-10-16 23:33
+
+WXLIBNAME = wxmsw28
+CPP       = g++.exe
+CC        = gcc.exe
+WINDRES   = "windres.exe"
+OBJ       = Objects/MingW/PCB\ CAM\ ProcessorApp.o Objects/MingW/PCB\ CAM\ ProcessorFrm.o Objects/MingW/CNCGenFrm.o Objects/MingW/MyBox.o Objects/MingW/Dpoint.o Objects/MingW/PCBNode.o Objects/MingW/MyGL.o Objects/MingW/PCBoPad.o Objects/MingW/PCBsPad.o Objects/MingW/PCBsPath.o Objects/MingW/rxString.o Objects/MingW/Primitive.o Objects/MingW/CAM.o Objects/MingW/PCBrPad.o Objects/MingW/CNCTemplate.o Objects/MingW/rxRegex.o Objects/MingW/MyConfigFile.o Objects/MingW/Group.o Objects/MingW/PCBHole.o Objects/MingW/xmlfunc.o Objects/MingW/NodeMeneger.o Objects/MingW/PropertiesDlg.o Objects/MingW/PCB_CAM_Processor_private.res
+LINKOBJ   = "Objects/MingW/PCB CAM ProcessorApp.o" "Objects/MingW/PCB CAM ProcessorFrm.o" "Objects/MingW/CNCGenFrm.o" "Objects/MingW/MyBox.o" "Objects/MingW/Dpoint.o" "Objects/MingW/PCBNode.o" "Objects/MingW/MyGL.o" "Objects/MingW/PCBoPad.o" "Objects/MingW/PCBsPad.o" "Objects/MingW/PCBsPath.o" "Objects/MingW/rxString.o" "Objects/MingW/Primitive.o" "Objects/MingW/CAM.o" "Objects/MingW/PCBrPad.o" "Objects/MingW/CNCTemplate.o" "Objects/MingW/rxRegex.o" "Objects/MingW/MyConfigFile.o" "Objects/MingW/Group.o" "Objects/MingW/PCBHole.o" "Objects/MingW/xmlfunc.o" "Objects/MingW/NodeMeneger.o" "Objects/MingW/PropertiesDlg.o" Objects/MingW/PCB_CAM_Processor_private.res
+LIBS      = -L"G:/C++/Dev-Cpp/Lib" -mwindows -l$(WXLIBNAME) -l$(WXLIBNAME)_gl -lwxtiff -lwxjpeg -lwxpng -lwxzlib -lwxregex -lwxexpat -lkernel32 -luser32 -lgdi32 -lcomdlg32 -lwinspool -lwinmm -lshell32 -lcomctl32 -lole32 -loleaut32 -luuid -lrpcrt4 -ladvapi32 -lwsock32 -lodbc32 -lopengl32 -lglu32  -lglaux  
+INCS      = -I"G:/C++/Dev-Cpp/Include"
+CXXINCS   = -I"G:/C++/Dev-Cpp/lib/gcc/mingw32/3.4.5/include" -I"G:/C++/Dev-Cpp/include/c++/3.4.5/backward" -I"G:/C++/Dev-Cpp/include/c++/3.4.5/mingw32" -I"G:/C++/Dev-Cpp/include/c++/3.4.5" -I"G:/C++/Dev-Cpp/include" -I"G:/C++/Dev-Cpp/" -I"G:/C++/Dev-Cpp/include/3rdparty/wx/plotctrl" -I"G:/C++/Dev-Cpp/include/3rdparty/wx/sheet" -I"G:/C++/Dev-Cpp/include/3rdparty/wx/treemultictrl" -I"G:/C++/Dev-Cpp/include/3rdparty/wx/things" -I"G:/C++/Dev-Cpp/include/3rdparty/wx" -I"G:/C++/Dev-Cpp/include/3rdparty" -I"G:/C++/Dev-Cpp/include/common/wx/msw" -I"G:/C++/Dev-Cpp/include/common/wx/generic" -I"G:/C++/Dev-Cpp/include/common/wx/fl" -I"G:/C++/Dev-Cpp/include/common/wx/gizmos" -I"G:/C++/Dev-Cpp/include/common/wx/html" -I"G:/C++/Dev-Cpp/include/common/wx/mmedia" -I"G:/C++/Dev-Cpp/include/common/wx/net" -I"G:/C++/Dev-Cpp/include/common/wx/ogl" -I"G:/C++/Dev-Cpp/include/common/wx/plot" -I"G:/C++/Dev-Cpp/include/common/wx/protocol" -I"G:/C++/Dev-Cpp/include/common/wx/stc" -I"G:/C++/Dev-Cpp/include/common/wx/svg" -I"G:/C++/Dev-Cpp/include/common/wx/xml" -I"G:/C++/Dev-Cpp/include/common/wx/xrc" -I"G:/C++/Dev-Cpp/include/common/wx" -I"G:/C++/Dev-Cpp/include/common"
+RCINCS    = --include-dir "G:/C__~1/Dev-Cpp/include/common"
+BIN       = Output/MingW/PCB CAM Processor.exe
+DEFINES   = -D__WXMSW__ -D__GNUWIN32__ -D__WIN95__
+CXXFLAGS  = $(CXXINCS) $(DEFINES) -fno-exceptions -fno-pcc-struct-return -fstrict-aliasing -Wall -D__WXMSW__ -D__GNUWIN32__ -D__WIN95__   -fexpensive-optimizations -O3
+CFLAGS    = $(INCS) $(DEFINES) -fno-exceptions -fno-pcc-struct-return -fstrict-aliasing -Wall -D__WXMSW__ -D__GNUWIN32__ -D__WIN95__   -fexpensive-optimizations -O3
+GPROF     = gprof.exe
+RM        = rm -f
+LINK      = g++.exe
+
+.PHONY: all all-before all-after clean clean-custom
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	$(RM) $(LINKOBJ) "$(BIN)"
+
+$(BIN): $(OBJ)
+	$(LINK) $(LINKOBJ) -o "$(BIN)" $(LIBS) 
+
+Objects/MingW/PCB\ CAM\ ProcessorApp.o: $(GLOBALDEPS) PCB\ CAM\ ProcessorApp.cpp PCB\ CAM\ ProcessorApp.h PCB\ CAM\ ProcessorFrm.h Geometry/Geometry.h Geometry/MyGL.h Geometry/Dpoint.h Geometry/Dpoint.h Geometry/PCBNode.h Geometry/Dpoint.h MySource/inc/rx.h MySource/inc/wx.h Geometry/PCBHole.h Geometry/PCBCore.h Geometry/MyGL.h Geometry/Primitive.h Geometry/Dpoint.h Geometry/NodeMeneger.h Geometry/PCBNode.h xmlfunc.h Geometry/PCBsPad.h Geometry/PCBPad.h Geometry/PCBObject.h Geometry/PCBCore.h Geometry/PCBrPad.h Geometry/PCBPad.h Geometry/PCBoPad.h Geometry/PCBPad.h Geometry/PCBsPath.h Geometry/PCBObject.h Geometry/Group.h Geometry/Geometry.h MySource/inc/myconfigfile.h MySource/inc/wx.h xmlfunc.h CNCGenFrm.h MySource/inc/rx.h MySource/inc/myconfigfile.h MySource/inc/myrequester.h MySource/inc/wx.h MySource/inc/mybox.h CNCTemplate.h MySource/inc/rx.h MySource/inc/mybox.h PropertiesDlg.h Geometry/Group.h
+	$(CPP) -c "PCB CAM ProcessorApp.cpp" -o "Objects/MingW/PCB CAM ProcessorApp.o" $(CXXFLAGS)
+
+Objects/MingW/PCB\ CAM\ ProcessorFrm.o: $(GLOBALDEPS) PCB\ CAM\ ProcessorFrm.cpp PCB\ CAM\ ProcessorFrm.h Geometry/Geometry.h Geometry/MyGL.h Geometry/Dpoint.h Geometry/Dpoint.h Geometry/PCBNode.h Geometry/Dpoint.h MySource/inc/rx.h MySource/inc/wx.h Geometry/PCBHole.h Geometry/PCBCore.h Geometry/MyGL.h Geometry/Primitive.h Geometry/Dpoint.h Geometry/NodeMeneger.h Geometry/PCBNode.h xmlfunc.h Geometry/PCBsPad.h Geometry/PCBPad.h Geometry/PCBObject.h Geometry/PCBCore.h Geometry/PCBrPad.h Geometry/PCBPad.h Geometry/PCBoPad.h Geometry/PCBPad.h Geometry/PCBsPath.h Geometry/PCBObject.h Geometry/Group.h Geometry/Geometry.h MySource/inc/myconfigfile.h MySource/inc/wx.h xmlfunc.h CNCGenFrm.h MySource/inc/rx.h MySource/inc/myconfigfile.h MySource/inc/myrequester.h MySource/inc/wx.h MySource/inc/mybox.h CNCTemplate.h MySource/inc/rx.h MySource/inc/mybox.h PropertiesDlg.h Geometry/Group.h Images/PCB_CAM_ProcessorFrm_WxToolButton1_XPM.xpm Images/PCB_CAM_ProcessorFrm_WxToolButton4_XPM.xpm Images/PCB_CAM_ProcessorFrm_WxToolButton3_XPM.xpm Images/PCB_CAM_ProcessorFrm_WxToolButton2_XPM.xpm Images/PCB_CAM_ProcessorFrm_WxToolButton6_XPM.xpm Images/PCB_CAM_ProcessorFrm_WxToolButton5_XPM.xpm Images/stopm.xpm Images/playpause.xpm
+	$(CPP) -c "PCB CAM ProcessorFrm.cpp" -o "Objects/MingW/PCB CAM ProcessorFrm.o" $(CXXFLAGS)
+
+Objects/MingW/CNCGenFrm.o: $(GLOBALDEPS) CNCGenFrm.cpp CNCGenFrm.h MySource/inc/rx.h MySource/inc/wx.h MySource/inc/myconfigfile.h MySource/inc/wx.h MySource/inc/myrequester.h MySource/inc/wx.h MySource/inc/mybox.h CNCTemplate.h MySource/inc/rx.h MySource/inc/mybox.h PCB\ CAM\ ProcessorFrm.h Geometry/Geometry.h Geometry/MyGL.h Geometry/Dpoint.h Geometry/Dpoint.h Geometry/PCBNode.h Geometry/Dpoint.h MySource/inc/rx.h Geometry/PCBHole.h Geometry/PCBCore.h Geometry/MyGL.h Geometry/Primitive.h Geometry/Dpoint.h Geometry/NodeMeneger.h Geometry/PCBNode.h xmlfunc.h Geometry/PCBsPad.h Geometry/PCBPad.h Geometry/PCBObject.h Geometry/PCBCore.h Geometry/PCBrPad.h Geometry/PCBPad.h Geometry/PCBoPad.h Geometry/PCBPad.h Geometry/PCBsPath.h Geometry/PCBObject.h Geometry/Group.h Geometry/Geometry.h MySource/inc/myconfigfile.h xmlfunc.h CNCGenFrm.h PropertiesDlg.h Geometry/Group.h
+	$(CPP) -c CNCGenFrm.cpp -o Objects/MingW/CNCGenFrm.o $(CXXFLAGS)
+
+Objects/MingW/MyBox.o: $(GLOBALDEPS) MySource/MyBox.cpp MySource/inc/mybox.h
+	$(CPP) -c MySource/MyBox.cpp -o Objects/MingW/MyBox.o $(CXXFLAGS)
+
+Objects/MingW/Dpoint.o: $(GLOBALDEPS) Geometry/Dpoint.cpp Geometry/Dpoint.h
+	$(CPP) -c Geometry/Dpoint.cpp -o Objects/MingW/Dpoint.o $(CXXFLAGS)
+
+Objects/MingW/PCBNode.o: $(GLOBALDEPS) Geometry/PCBNode.cpp Geometry/PCBNode.h Geometry/Dpoint.h MySource/inc/rx.h MySource/inc/wx.h Geometry/MyGL.h Geometry/Dpoint.h
+	$(CPP) -c Geometry/PCBNode.cpp -o Objects/MingW/PCBNode.o $(CXXFLAGS)
+
+Objects/MingW/MyGL.o: $(GLOBALDEPS) Geometry/MyGL.cpp Geometry/MyGL.h Geometry/Dpoint.h
+	$(CPP) -c Geometry/MyGL.cpp -o Objects/MingW/MyGL.o $(CXXFLAGS)
+
+Objects/MingW/PCBoPad.o: $(GLOBALDEPS) Geometry/PCBoPad.cpp Geometry/PCBoPad.h Geometry/PCBPad.h Geometry/PCBObject.h Geometry/PCBCore.h Geometry/MyGL.h Geometry/Dpoint.h Geometry/Primitive.h Geometry/Dpoint.h Geometry/NodeMeneger.h Geometry/PCBNode.h Geometry/Dpoint.h MySource/inc/rx.h MySource/inc/wx.h xmlfunc.h
+	$(CPP) -c Geometry/PCBoPad.cpp -o Objects/MingW/PCBoPad.o $(CXXFLAGS)
+
+Objects/MingW/PCBsPad.o: $(GLOBALDEPS) Geometry/PCBsPad.cpp Geometry/PCBsPad.h Geometry/PCBPad.h Geometry/PCBObject.h Geometry/PCBCore.h Geometry/MyGL.h Geometry/Dpoint.h Geometry/Primitive.h Geometry/Dpoint.h Geometry/NodeMeneger.h Geometry/PCBNode.h Geometry/Dpoint.h MySource/inc/rx.h MySource/inc/wx.h xmlfunc.h
+	$(CPP) -c Geometry/PCBsPad.cpp -o Objects/MingW/PCBsPad.o $(CXXFLAGS)
+
+Objects/MingW/PCBsPath.o: $(GLOBALDEPS) Geometry/PCBsPath.cpp Geometry/PCBsPath.h Geometry/PCBObject.h Geometry/PCBCore.h Geometry/MyGL.h Geometry/Dpoint.h Geometry/Primitive.h Geometry/Dpoint.h Geometry/NodeMeneger.h Geometry/PCBNode.h Geometry/Dpoint.h MySource/inc/rx.h MySource/inc/wx.h xmlfunc.h
+	$(CPP) -c Geometry/PCBsPath.cpp -o Objects/MingW/PCBsPath.o $(CXXFLAGS)
+
+Objects/MingW/rxString.o: $(GLOBALDEPS) MySource/rxString.cpp MySource/inc/rx.h MySource/inc/wx.h
+	$(CPP) -c MySource/rxString.cpp -o Objects/MingW/rxString.o $(CXXFLAGS)
+
+Objects/MingW/Primitive.o: $(GLOBALDEPS) Geometry/Primitive.cpp Geometry/Primitive.h Geometry/Dpoint.h Geometry/MyGL.h Geometry/Dpoint.h
+	$(CPP) -c Geometry/Primitive.cpp -o Objects/MingW/Primitive.o $(CXXFLAGS)
+
+Objects/MingW/CAM.o: $(GLOBALDEPS) CAM.cpp PCB\ CAM\ ProcessorFrm.h Geometry/Geometry.h Geometry/MyGL.h Geometry/Dpoint.h Geometry/Dpoint.h Geometry/PCBNode.h Geometry/Dpoint.h MySource/inc/rx.h MySource/inc/wx.h Geometry/PCBHole.h Geometry/PCBCore.h Geometry/MyGL.h Geometry/Primitive.h Geometry/Dpoint.h Geometry/NodeMeneger.h Geometry/PCBNode.h xmlfunc.h Geometry/PCBsPad.h Geometry/PCBPad.h Geometry/PCBObject.h Geometry/PCBCore.h Geometry/PCBrPad.h Geometry/PCBPad.h Geometry/PCBoPad.h Geometry/PCBPad.h Geometry/PCBsPath.h Geometry/PCBObject.h Geometry/Group.h Geometry/Geometry.h MySource/inc/myconfigfile.h MySource/inc/wx.h xmlfunc.h CNCGenFrm.h MySource/inc/rx.h MySource/inc/myconfigfile.h MySource/inc/myrequester.h MySource/inc/wx.h MySource/inc/mybox.h CNCTemplate.h MySource/inc/rx.h MySource/inc/mybox.h PropertiesDlg.h Geometry/Group.h
+	$(CPP) -c CAM.cpp -o Objects/MingW/CAM.o $(CXXFLAGS)
+
+Objects/MingW/PCBrPad.o: $(GLOBALDEPS) Geometry/PCBrPad.cpp Geometry/PCBrPad.h Geometry/PCBPad.h Geometry/PCBObject.h Geometry/PCBCore.h Geometry/MyGL.h Geometry/Dpoint.h Geometry/Primitive.h Geometry/Dpoint.h Geometry/NodeMeneger.h Geometry/PCBNode.h Geometry/Dpoint.h MySource/inc/rx.h MySource/inc/wx.h xmlfunc.h
+	$(CPP) -c Geometry/PCBrPad.cpp -o Objects/MingW/PCBrPad.o $(CXXFLAGS)
+
+Objects/MingW/CNCTemplate.o: $(GLOBALDEPS) CNCTemplate.cpp CNCTemplate.h MySource/inc/rx.h MySource/inc/wx.h MySource/inc/mybox.h
+	$(CPP) -c CNCTemplate.cpp -o Objects/MingW/CNCTemplate.o $(CXXFLAGS)
+
+Objects/MingW/rxRegex.o: $(GLOBALDEPS) MySource/rxRegex.cpp MySource/inc/rx.h MySource/inc/wx.h
+	$(CPP) -c MySource/rxRegex.cpp -o Objects/MingW/rxRegex.o $(CXXFLAGS)
+
+Objects/MingW/MyConfigFile.o: $(GLOBALDEPS) MySource/MyConfigFile.cpp MySource/inc/myconfigfile.h MySource/inc/wx.h
+	$(CPP) -c MySource/MyConfigFile.cpp -o Objects/MingW/MyConfigFile.o $(CXXFLAGS)
+
+Objects/MingW/Group.o: $(GLOBALDEPS) Geometry/Group.cpp Geometry/Group.h Geometry/Geometry.h Geometry/MyGL.h Geometry/Dpoint.h Geometry/Dpoint.h Geometry/PCBNode.h Geometry/Dpoint.h MySource/inc/rx.h MySource/inc/wx.h Geometry/PCBHole.h Geometry/PCBCore.h Geometry/MyGL.h Geometry/Primitive.h Geometry/Dpoint.h Geometry/NodeMeneger.h Geometry/PCBNode.h xmlfunc.h Geometry/PCBsPad.h Geometry/PCBPad.h Geometry/PCBObject.h Geometry/PCBCore.h Geometry/PCBrPad.h Geometry/PCBPad.h Geometry/PCBoPad.h Geometry/PCBPad.h Geometry/PCBsPath.h Geometry/PCBObject.h MySource/inc/myconfigfile.h MySource/inc/wx.h xmlfunc.h
+	$(CPP) -c Geometry/Group.cpp -o Objects/MingW/Group.o $(CXXFLAGS)
+
+Objects/MingW/PCBHole.o: $(GLOBALDEPS) Geometry/PCBHole.cpp Geometry/PCBHole.h Geometry/PCBCore.h Geometry/MyGL.h Geometry/Dpoint.h Geometry/Primitive.h Geometry/Dpoint.h Geometry/NodeMeneger.h Geometry/PCBNode.h Geometry/Dpoint.h MySource/inc/rx.h MySource/inc/wx.h xmlfunc.h
+	$(CPP) -c Geometry/PCBHole.cpp -o Objects/MingW/PCBHole.o $(CXXFLAGS)
+
+Objects/MingW/xmlfunc.o: $(GLOBALDEPS) xmlfunc.cpp xmlfunc.h
+	$(CPP) -c xmlfunc.cpp -o Objects/MingW/xmlfunc.o $(CXXFLAGS)
+
+Objects/MingW/NodeMeneger.o: $(GLOBALDEPS) Geometry/NodeMeneger.cpp Geometry/NodeMeneger.h Geometry/PCBNode.h Geometry/Dpoint.h MySource/inc/rx.h MySource/inc/wx.h xmlfunc.h
+	$(CPP) -c Geometry/NodeMeneger.cpp -o Objects/MingW/NodeMeneger.o $(CXXFLAGS)
+
+Objects/MingW/PropertiesDlg.o: $(GLOBALDEPS) PropertiesDlg.cpp PropertiesDlg.h Geometry/Group.h Geometry/Geometry.h Geometry/MyGL.h Geometry/Dpoint.h Geometry/Dpoint.h Geometry/PCBNode.h Geometry/Dpoint.h MySource/inc/rx.h MySource/inc/wx.h Geometry/PCBHole.h Geometry/PCBCore.h Geometry/MyGL.h Geometry/Primitive.h Geometry/Dpoint.h Geometry/NodeMeneger.h Geometry/PCBNode.h xmlfunc.h Geometry/PCBsPad.h Geometry/PCBPad.h Geometry/PCBObject.h Geometry/PCBCore.h Geometry/PCBrPad.h Geometry/PCBPad.h Geometry/PCBoPad.h Geometry/PCBPad.h Geometry/PCBsPath.h Geometry/PCBObject.h MySource/inc/myconfigfile.h MySource/inc/wx.h xmlfunc.h
+	$(CPP) -c PropertiesDlg.cpp -o Objects/MingW/PropertiesDlg.o $(CXXFLAGS)
+
+Objects/MingW/PCB_CAM_Processor_private.res: Objects/MingW/PCB_CAM_Processor_private.rc PCB\ CAM\ ProcessorApp.rc 
+	$(WINDRES) --input-format=rc -o Objects/MingW/PCB_CAM_Processor_private.res $(RCINCS) Objects/MingW/PCB_CA~1.RC -O coff
