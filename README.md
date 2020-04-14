@@ -11,6 +11,3 @@ http://radtech.cba.pl/servosoft.html
 
 ### Project created with wxDec-C++ environment
 http://wxdsgn.sourceforge.net/?q=node/4
-
-![GitHub Logo](PCB-CAM-Processor-1.1/PCB CAM Processor 1.1 - Praca Inżynierska/Konferencja Inżynier XXI wieku/Radosław-Siwiec-poster-2016.png)
-Format: ![Alt Text](url)
